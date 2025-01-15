@@ -19,6 +19,13 @@ What is software security? (IEEE definitions)
 
 With rare exceptions, all vulnerabilities can be thought of as input validation failures.
 
+## Memory Leaks
+
+Memory leaks are undesirable, however not considered a memory safety issue from a theoretical standpoint:
+
+- Short-lived applications can intentionally leak memory with the intent that the OS will clean up after completion (ex. terminal app)
+- Leaking memory will not result in misinterpretting that memory and thus will not cause a security issue.
+
 ## Taxonomy
 
 | Type                       | Example                      |
@@ -31,6 +38,7 @@ With rare exceptions, all vulnerabilities can be thought of as input validation 
 |  3. Undefined behavior     |                              |
 |- Thread safety             | Data race condition          |
 |- Type safety               | No interpreting as wrong type|
+|- Memory leak               | Not freeing after done       |
 
 ## Evaluations
 
